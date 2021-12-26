@@ -1,0 +1,14 @@
+a = str(input())
+num=''
+i = 0
+while i < len(a):
+    if a[i].isdigit():
+        while a[i].isdigit():
+            num+=str(a[i])
+            i+= 1
+        print(a[i] * int(num), end='')
+        num=''
+    else:
+        if a[i-1].isalpha():
+            print(a[i], end='')
+    i += 1
