@@ -1,4 +1,2 @@
-# school-projects
-My hw for informatics class 
-
-September-December 2021
+# school-projects 2021
+My hw for informatics class September-December 2021
