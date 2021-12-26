@@ -1,0 +1,7 @@
+num = int(input())
+string = str(input())
+alf = 'abcdefghijklmnopqrstuvwxyz'
+for i in range(len(string)):
+    index = alf.find(string[i])
+    index = (index - num) % 26
+    print(alf[index], end='')
