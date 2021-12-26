@@ -1,0 +1,25 @@
+lst1 = 'abcde'
+lst2 = 'fghik'
+lst3 = 'lmnop'
+lst4 = 'qrstu'
+lst5 = 'vwxyz'
+list_all = [lst1, lst2, lst3, lst4, lst5]
+alf = 'abcdefghiklmnopqrstuvwxyz'
+    
+keyy = str(input())
+key1 = int(keyy[0])
+key2 = int(keyy[1])
+string = (input())
+for i in range(len(string)):
+    index = alf.find(string[i])
+    a = ((index)//5)
+    b = (index%5)
+    if a - key1 < 0:
+        a_new = (5 - key1) + a
+    else:
+        a_new = a - key1
+    if b - key2 < 0:
+        b_new = (5 - key2) + b
+    else: 
+        b_new = b - key2
+    print(list_all[a_new][b_new], end='')
