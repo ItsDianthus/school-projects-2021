@@ -1,0 +1,13 @@
+key = int(input())
+k_word = str(input())
+word = str(input())
+alf_old = 'abcdefghijklmnopqrstuvwxyz'
+alf = alf_old
+zap = alf[len(alf) - key - 1]
+for i in k_word:
+    alf = alf.replace(str(i), '')
+    a, b = alf.split(alf[len(alf) - key])
+alf = b + k_word + a + zap
+for i in range (0, len(word)):
+    index = alf_old.find(str(word[i]))
+    print(alf[index], sep='', end='')
