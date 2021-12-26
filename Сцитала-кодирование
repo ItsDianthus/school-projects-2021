@@ -1,0 +1,12 @@
+# http://study.itpolygon.tilda.ws/it/inf/crypto/permutation
+# В первой строке вводится два числа через пробел R & C - количество строк и столбцов для шифра сцитала. 
+# Во второй строке пишется фраза. Гарантируется, что длина фразы соответствует R*C, т.е. без пробелов запишется в таблицу.
+
+m, n = map(int, input().split())
+textt = str(input())
+for item in range(n):
+    text = textt
+    for i in range(len(text)//n):
+        string = text[:n]
+        print(string[item], end='')
+        text = text[n:]
