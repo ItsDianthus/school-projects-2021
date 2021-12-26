@@ -1,0 +1,15 @@
+a = input()
+flag = False
+cnt = 0
+for i in range(1, len(a)):
+    if (a[i-1].isdigit() and flag==False):
+        print(a[i] * int(a[i-1]), end='')
+        flag = True
+        cnt=0
+    elif (a[i-2].isalpha() or flag==False):
+        print(a[i-1], end='')
+    cnt+=1
+    if (flag == True and cnt==2):
+        flag = False
+if (a[-2].isalpha()or flag==False):
+    print(a[-1], end='')
