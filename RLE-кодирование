@@ -1,0 +1,15 @@
+a = str(input())
+count = 1
+for i in range(count, len(a)):
+    if a[i-1] == a[i]:
+        count += 1
+    else:
+        if count == 1:
+            print(a[i-1], sep='', end='')
+        else:
+            print(count, a[i-1], sep='', end='')
+        count = 1
+if count == 1:
+    print(a[-1], sep='', end='')
+else:
+    print(count, a[-1], sep='', end='')
