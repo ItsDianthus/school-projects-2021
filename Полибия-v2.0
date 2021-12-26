@@ -1,0 +1,27 @@
+#helloworld - fnpolparrd
+
+lst1 = 'abcde'
+lst2 = 'fghik'
+lst3 = 'lmnop'
+lst4 = 'qrstu'
+lst5 = 'vwxyz'
+listt = [lst1, lst2, lst3, lst4, lst5]
+alf = 'abcdefghiklmnopqrstuvwxyz'
+num = '0123456789'
+cnt = 0
+string = (input())
+row = ''
+col = ''
+for i in range(0, len(string)):
+    index = alf.find(string[i])
+    a = ((index)//5)
+    b = (index%5)
+    row = row + str(a)
+    col = col + str(b)
+row_all = row + col
+for i in range ((len(row_all))//2):
+    a_new = int(row_all[:1])
+    row_all = row_all[1:]
+    b_new = int(row_all[:1])
+    row_all = row_all[1:]
+    print(listt[a_new][b_new], end='')
