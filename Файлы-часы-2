@@ -1,0 +1,12 @@
+#Работа с файловой системой - часы, минуты, секунды из секунд. hh:mm:ss
+
+file = open('input.txt', 'r')
+n = int(file.readline())
+sec = (n %3600)% 60
+h = (n//3600)% 24
+mins = (n//60 % 60)
+a = [str(h).zfill(2), str(mins).zfill(2), str(sec).zfill(2)]
+file.close()
+file2 = open('output.txt', 'w')
+file2.write(':'.join(a))
+file2.close()
